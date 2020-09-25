@@ -1,0 +1,102 @@
+@CHARSET "UTF-8";
+
+/* 
+	MAIN PAGE 
+*/
+#window-container {
+	width: 100%;
+}
+
+.vessels-container {
+	width: 80vw;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.vessel-item-container {
+	height: 300px;
+	width: 25%;
+	/*margin: 5vh 0;*/
+	padding: 30px 15px;
+}
+
+.vessel-item {
+	height: 100%;
+	border: 3px solid #0D627D;
+	border-radius: 10px;
+	padding: 10px;
+	transition: all 0.3s ease;
+}
+
+.vessel-item:hover {
+	padding: 0;
+	/*background: grey;*/
+	/*opacity: 0.3;*/
+}
+
+.vessel-img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+.vessel-label {
+	position: relative; 
+	bottom: 40px; 
+	height: 40px; 
+	width: 100%; 
+	background: white; 
+	font-weight: bold;
+	opacity: 0.9; 
+	border-bottom-left-radius: 10px; 
+	border-bottom-right-radius: 10px; 
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+	flex-direction: column;
+	transition: all 0.3s ease;
+	overflow-y: hidden;
+}
+
+.vessel-label:hover {
+	height: 100%;
+	bottom: 100%;
+	border-radius: 10px; 
+}
+
+.vessel-details {
+	width: 100%;
+	height: 0;
+	text-align: center;
+	display: none;
+	/*align-items: center;
+	justify-content: center;
+	flex-direction: column;*/
+}
+
+.vessel-label:hover > div {
+	display: block;
+	height: 60%;
+	margin-top: 20px;
+}
+
+/* 
+	RESPONSIVE DESIGN
+*/ 
+@media only screen and (max-width: 1300px) {
+	.vessel-item-container {
+		width: 33%;
+	}
+}
+@media only screen and (max-width: 850px) {
+	.vessel-item-container {
+		width: 50%;
+	}
+}
+@media only screen and (max-width: 500px) {
+	.vessel-item-container {
+		width: 100%;
+	}
+}

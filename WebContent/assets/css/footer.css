@@ -1,0 +1,22 @@
+@CHARSET "UTF-8";
+
+/* 
+	FOOTER 
+*/
+.footer {
+	border-top: 2px solid #0D627D;
+	background: white;
+	height: 150px;
+}
+
+#footer-container {
+	height: 100%; 
+	display: flex; 
+	flex-direction: column; 
+	align-items: center;
+}
+
+#footer-img {
+	height: 80px;
+	margin: 10px 0;
+}

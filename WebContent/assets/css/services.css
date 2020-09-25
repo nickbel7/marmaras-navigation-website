@@ -1,0 +1,145 @@
+@CHARSET "UTF-8";
+
+/* 
+	MAIN PAGE 
+*/
+
+/* GIA SNAP SCROLLING */
+/* xreiazetai kai ena div me id container meta to header sthn html selida
+body {
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+} 
+
+#container {
+	height: 90vh;
+	width: 100%;
+	scroll-snap-type: mandatory;
+	scroll-snap-points-y: repeat(90vh);
+	scroll-snap-type: y mandatory;
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+}
+
+.scroll {
+	scroll-snap-align: start;
+}
+ ===========  */
+
+.segment {
+	width: 100%;
+	height: 90vh;
+	/*background: linear-gradient(90deg, rgba(0,86,128,0.8631827731092436) 0%, rgba(0,86,128,0.7539390756302521) 31%, rgba(96,135,172,0) 35%);*/
+	padding: 0; 
+	display: flex; 
+	flex-direction: row;
+}
+
+.segment-reverse {
+	width: 100%; 
+	height: 90vh; 
+	/*background: linear-gradient(270deg, rgba(0,86,128,0.8631827731092436) 0%, rgba(0,86,128,0.7539390756302521) 31%, rgba(96,135,172,0) 35%);*/ 
+	padding: 0; 
+	display: flex; 
+	flex-direction: row;
+}
+
+.segment-img {
+	height: 100%; 
+	width: 40%;  
+	display: flex; 
+	/*align-items: center;*/
+}
+
+.segment-img > img {
+	height: 100%;
+	width: 100%;
+	margin: auto; 
+	object-fit: cover;
+	/*width: -webkit-fill-available;*/ 
+	/*padding: 0 60px;*/
+}
+
+.segment-info {
+	height: 100%; 
+	width: 60%;  
+	padding: 10vh 80px;
+	display: flex; 
+	align-items: center;
+}
+
+.segment-info-inner {
+	border: 6px solid #0D88A2; 
+	height: max-content; 
+	width: 100%; 
+	border-radius: 10px; 
+	padding: 40px 2vw; 
+	display: flex; 
+	align-items: center; 
+	flex-direction: column;
+}
+
+#top-btn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: 2px solid #0D627D;
+  outline: none;
+  background-color: white;
+  color: #0D627D;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+
+/* 
+	RESPONSIVE DESIGN
+*/ 
+@media only screen and (max-width: 850px) {
+	.segment {
+		height: max-content;
+		flex-direction: column;
+	}
+	
+	.segment-reverse {
+		height: max-content;
+		flex-direction: column-reverse;
+	}
+	
+	.segment-img, .segment-info {
+		width: 100%;
+	}	
+	
+	.segment-img > img{
+		max-height: 60vh;
+	}
+	
+	.segment-info {
+		padding: 10vh 40px;
+	}
+}
+
+/*
+	color palette
+*/
+.kati {
+	/*primary*/
+	color: #0D627D;
+	/*secondary*/
+	color: #0080C0;
+	/*third*/
+	color: #0D88A2;
+	
+	color: #073d4e;
+	color: #0b546c;
+	color: #005680;
+	color: #1e84b5;
+	color: #d0e0f2;
+	color: #0080C0;
+}
+
